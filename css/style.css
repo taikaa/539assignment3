@@ -1,0 +1,75 @@
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: #f1f1f1;
+}
+/* navigation bar edits */
+nav li a {
+	display: block;
+	color: #000000;
+	padding: 20px;
+	text-decoration: none;
+	font-family: Helvetica, Verdana; 
+}
+
+nav li a:hover {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+
+p {
+	font-family: Helvetica, Verdana;
+}
+
+p.subtitle {
+	font-family: Helvetica, Verdana;
+	font-style: italic;
+}
+
+.current {
+	text-decoration: underline;
+}
+
+h1 {
+	font-family: Helvetica, Verdana;
+}
+
+h2 {
+	font-family: Helvetica, Verdana;
+}
+
+li {
+	display: list-item;
+	list-style: disc outside none;
+	margin-left: 1em;
+	list-style-type: square;
+} /* got help from this post on making list bullets visible */
+
+ul {
+	list-style-type: square;
+	font-family: Helvetica, Verdana;
+}
+
+
+/* gathered this from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
+
+.skip-main {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+	overflow: hidden;
+	text-align: left;
+}
+
+a.skip-main:active,
+a.skip-main:focus,
+a.skip-main:hover {
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+	overflow: visible;
+}
