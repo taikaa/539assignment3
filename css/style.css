@@ -1,22 +1,40 @@
 
 body {
 	font-family: Roboto, Helvetica, Verdana;
+	padding: 1%;
 }
 
 
 header{
-	/*position: fixed;*/
+	background: #f1f1f1;
+	display: flex;
+    justify-content: space-between;
 }
+/* -----styling header ------- */
 /* navigation bar edits */
+
+nav {
+	width: 100%;
+}
+
 nav ul {
+	display: flex;
+	justify-content: flex-start;
 	margin: 0;
 	padding: 5px 5px;
 	background-color: #f1f1f1;
 	text-align: right;
+	align-items: center;
 }
-
+.social{
+	display: none;
+}
 nav li {
 	display: inline-block;
+	width: 24%;
+	text-align: center;
+	min-height: 6vh;
+	background-color: white;
 }
 nav li a {
 	display: inline-block; /* added */ 
@@ -29,12 +47,21 @@ nav li a {
 	font-family: Roboto, Helvetica, Verdana; 
 }
 
-nav li a:hover {
+nav li:hover {
 	background-color: #000000;
 	color: #FFFFFF;
 }
 
-/* text styling within html */
+nav li a:hover {
+	color: #FFFFFF;
+}
+
+/* font awesome social media links */
+div i.fab {
+	color: black;
+	position: relative;
+	align-self: left;
+}
 
 
 /* flex boxes */
@@ -91,7 +118,7 @@ div.about_me {
 	margin-left: 5%;
 	margin-bottom: 5%;
 	display: inline-block;
-	width: 40%;
+	width: 90%;
 
 }
 
@@ -103,7 +130,7 @@ div.about_me {
 
 div.pyramid {
 	display: inline-block;
-	width: 40%;
+	width: 90%;
 	height: 30vh;
 	margin-bottom: 5%;
 }
@@ -126,6 +153,18 @@ img.companalysis {
 	margin: auto;
 }
 
+/* ux grid page */
+.ux_grid {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.ux_grid img {
+	border: 1px solid black;
+}
+
 /* end styling images */
 /* gathered this from https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
 /* got a link to resource from Katie for this part */ 
@@ -145,4 +184,31 @@ a.skip-main:focus {
 	height: auto;
 	background: white;
 	overflow: visible;
+}
+
+@media screen and (min-width:780px){
+nav li {
+	display: inline-block;
+	width: 15%;
+	text-align: center;
+	min-height: 6vh;
+	background-color: white;
+}
+nav ul{
+	justify-content: flex-end;
+}
+
+.social{
+	display: block;
+}
+
+div.about_me, div.pyramid{
+	width:40%;
+}
+
+.ux_grid {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
 }
